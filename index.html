@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSS Bond Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:opsz,wght@8..48,200..900&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/webp" href="images/BasicBee.webp">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Bee Swarm Simulator Bond Calculator</h1>
+    </div>
+
+    <form id="calculator">
+      
+      <div class="level-grid">
+        <script>
+          for (let i = 1; i <= 25; i++) {
+            document.write(`
+              <div class="level-item">
+              <label for="${i}">Level ${i}:</label>
+              <input type="number" value="0" id="${i}" name="${i}" min="0" max="50">
+              </div>
+            `);
+          }
+        </script>
+      </div>
+
+      <div class="check-row">
+      <label for="puppybee">Puppy Bee:</label>
+      <input type="checkbox" id="puppybee" name="puppybee" value="puppybee">
+      </div><br>
+
+      <label for="bond">Moon Amulet Bond:</label>
+      <select name="bond" id="bond">
+        <script>
+        for (let i = 0; i <= 10; i++) {
+          document.write(`
+            <option value="${i}">${i}</option>
+          `);
+        }
+      </script>
+      </select><br><br>
+
+      <label for="hive">Wanted Hive:</label>
+      <input type="number" id="hive" name="hive" min="2" max="25"><br><br>
+
+      <button id="calc" type="button">Calculate</button><br><br>
+      <script src="main.js" defer></script>
+
+    </form>
+
+    <div class="result">
+
+      <h2>Total Cost:</h2>
+      <p id="cost">0</p>
+
+    </div>
+
+  </div>
+</body>
+
+</html>
