@@ -16,7 +16,9 @@
 <body>
   <div class="container">
     <div class="header">
+      <img src="images/BasicBee.webp" width="50" height="50">
       <h1>Bee Swarm Simulator Bond Calculator</h1>
+      <img src="images/BasicBee.webp" width="50" height="50">
     </div>
 
     <form id="calculator">
@@ -26,8 +28,8 @@
           for (let i = 1; i <= 25; i++) {
             document.write(`
               <div class="level-item">
-              <label for="${i}">Level ${i}:</label>
-              <input type="number" value="0" id="${i}" name="${i}" min="0" max="50">
+                <label for="${i}">Level ${i}:</label>
+                <input type="number" value="0" id="${i}" name="${i}" min="0" max="50">
               </div>
             `);
           }
@@ -35,25 +37,28 @@
       </div>
 
       <div class="check-row">
+      <img src="images/PuppyBee.png" width="40" height="40">
       <label for="puppybee">Puppy Bee:</label>
       <input type="checkbox" id="puppybee" name="puppybee" value="puppybee">
-      </div><br>
+      </div>
 
       <label for="bond">Moon Amulet Bond:</label>
       <select name="bond" id="bond">
         <script>
-        for (let i = 0; i <= 10; i++) {
-          document.write(`
-            <option value="${i}">${i}</option>
-          `);
-        }
-      </script>
-      </select><br><br>
+          for (let i = 0; i <= 10; i++) {
+            document.write(`
+              <option value="${i}">${i}</option>
+            `);
+          }
+        </script>
+      </select>
 
-      <label for="hive">Wanted Hive:</label>
-      <input type="number" value="2" id="hive" name="hive" min="2" max="25"><br><br>
+      <div class="hive">
+        <label for="hive">Wanted Hive:</label>
+        <input type="number" value="2" id="hive" name="hive" min="2" max="25">
+      </div>
 
-      <button id="calc" type="button">Calculate</button><br><br>
+      <button id="calc" type="button">Calculate</button>
       <script src="main.js" defer></script>
 
     </form>

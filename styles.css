@@ -49,6 +49,7 @@ body {
 }
 
 button {
+  margin: 10px 0 10px 0;
   width: 100%;
   padding: 14px 16px;
   border: none;
@@ -143,6 +144,7 @@ form label {
 }
 
 .check-row{
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -172,4 +174,13 @@ form label {
   align-items: center;
 
   color:#1b2a35
+}
+
+img{
+  margin: 10px;
+  border-radius: 10%;
+}
+
+.hive{
+  margin-top: 10px;
 }
